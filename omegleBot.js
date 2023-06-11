@@ -14,10 +14,10 @@ async function enviar() {
         text.value = array[i];
         sendBtn.click();
         i++
+        await sleep(2000);
     }
+    exitBtn.click();
     await sleep(2000);
-    exitBtn.click();
-    exitBtn.click();
-    exitBtn.click();
+    enviar();
 }
-setInterval(enviar, 4000);
+enviar();
